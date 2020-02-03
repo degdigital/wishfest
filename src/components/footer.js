@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 
 const Footer = ({ siteTitle }) => (
     <footer className="site-footer">
-        {siteTitle}
+        <div className="page-wrapper">
+            {siteTitle}
+        </div>
     </footer>
 )
 
