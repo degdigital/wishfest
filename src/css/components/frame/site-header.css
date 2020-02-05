@@ -6,6 +6,11 @@
     top: 0;
     width: 100%;
     z-index: 500;
+
+    & .page-wrapper {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @media screen and (--medium) {
