@@ -1,5 +1,6 @@
 .site-header {
     background-color: var(--color-black);
+    border-bottom: 1px solid var(--color-gray-30);
     left: 0;
     padding: 1em 0;
     position: fixed;
@@ -17,8 +18,9 @@
 
     .site-header {
         background-color: rgba(0,0,0, 0.6);
+        border-bottom: 1px solid transparent;
         padding: 2em 0;
-        transition: background-color 0.5s, padding 0.5s;
+        transition: background-color 0.5s, padding 0.5s, border-bottom 0.5s;
 
         & .page-wrapper {
             align-items: center;
@@ -28,6 +30,7 @@
 
         &.is-sticky {
             background-color: var(--color-black);
+            border-bottom: 1px solid var(--color-gray-30);
             padding: 1.25em 0;
         }
 
