@@ -1,0 +1,31 @@
+.countdown {
+    background-color: var(--color-black);
+    padding-bottom: 6.5rem;
+
+    & .page-wrapper {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+}
+
+.countdown__item {
+    flex-grow: 1;
+    padding-top: 7rem;
+    position: relative;
+}
+
+.countdown__value {
+    color: var(--color-purple-50);
+    font-size: 5.625rem;
+    font-weight: 300;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.countdown__label {
+    color: var(--color-white);
+}

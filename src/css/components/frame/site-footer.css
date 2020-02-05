@@ -1,0 +1,7 @@
+.site-footer {
+    background-color: var(--color-black);
+    color: var(--color-gray-50);
+    font-size: 0.75rem;
+    padding: 3rem 0;
+    text-align: center;
+}

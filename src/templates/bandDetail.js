@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import { SEO, Layout } from '../components/';
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 

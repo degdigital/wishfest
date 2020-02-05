@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Footer = ({ siteTitle }) => (
-    <footer className="site-footer">
+    <footer className="site-footer" role="contentinfo">
         <div className="page-wrapper">
-            {siteTitle}
+            <p dangerouslySetInnerHTML={{ __html: `&copy; ${new Date().getFullYear()} ${siteTitle}. All rights reserved.` }} />
         </div>
     </footer>
 )
@@ -17,4 +17,4 @@ Footer.defaultProps = {
     siteTitle: ``,
 }
 
-export default Footer
+export default Footer;

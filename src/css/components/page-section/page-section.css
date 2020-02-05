@@ -1,0 +1,26 @@
+.page-section {
+    color: var(--color-black);
+    font-size: 0.875rem;
+    padding: 6.5rem 0;
+}
+
+.page-section--dark {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.page-section--purple {
+    background-color: var(--color-purple-60);
+    color: var(--color-white);
+
+    & a {
+        color: var(--color-white);
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+    }
+
+}

@@ -1,0 +1,9 @@
+.site-logo {
+    height: auto;
+    transition: width 0.5s;
+    width: 12.5rem;
+}
+
+.is-sticky .site-logo {
+    width: 10rem;
+}

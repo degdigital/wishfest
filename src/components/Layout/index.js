@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
-import Header from './header.js';
-import Footer from './footer.js';
-import '../css/app.css';
+import { Footer, Header } from '../';
+import '../../css/app.css';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -14,14 +13,14 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div className="page-wrapper">
-        <main className="site-main" role="main">{children}</main>
-      </div>
+      <main className="site-main" role="main">
+        {children}
+      </main>
       <Footer siteTitle={data.site.siteMetadata.title} />
     </>
   )

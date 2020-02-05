@@ -1,8 +1,36 @@
 module.exports = {
   siteMetadata: {
-    title: `WishFestKC`,
+    title: `KC Rocks 2020`,
     description: `An event to benefit Make-A-Wish Kansas City.`,
     author: `@aladage`,
+    menuLinks: [
+      {
+        name: 'About KC Rocks',
+        link: '#about-kc-rocks'
+      },
+      {
+        name: 'About Make-A-Wish',
+        link: '#about-make-a-wish'
+      },
+      {
+        name: 'Bands',
+        link: '#bands'
+      },
+      {
+        name: 'Venue',
+        link: '#venue'
+      },
+      {
+        name: 'Get Tickets',
+        link: 'https://www.thetrumankc.com/tickets/',
+        classNames: 'button button--small'
+      },
+      {
+        name: 'Donate',
+        link: 'https://secure2.wish.org/site/SPageServer?pagename=donate_now&chid=073-000',
+        classNames: 'button button--small button--reversed'
+      }
+    ]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -36,6 +64,15 @@ module.exports = {
       options: {
         spaceId: `az174za7kubu`,
         accessToken: `SvKWdnehSy1HWVFbEDDy8J4PAky-jINBrUhSKdSX4wc`
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `montserrat`
+        ],
+        display: 'swap'
       }
     }
   ]
