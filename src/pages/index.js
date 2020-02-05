@@ -40,11 +40,11 @@ const IndexPage = () => (
       </div>
       <div className="page-wrapper page-wrapper--wide">
         <div className="bands__wrapper">
-          <a className="bands__item" href="http://thesamples.com/" target="_blank">
+          <a className="bands__item" href="http://thesamples.com/" target="_blank" rel="noopener noreferrer">
             <h2 className="bands__title">The Samples</h2>
             <img className="bands__image" src={thesamples} alt="The Samples" />
           </a>
-          <a className="bands__item" href="https://www.facebook.com/countercultureband/" target="_blank">
+          <a className="bands__item" href="https://www.facebook.com/countercultureband/" target="_blank" rel="noopener noreferrer">
             <h2 className="bands__title">Counter Culture</h2>
             <img className="bands__image" src={counterculture} alt="Counter Culture" />
           </a>

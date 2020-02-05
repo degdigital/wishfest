@@ -1,9 +1,17 @@
 .site-logo {
     height: auto;
-    transition: width 0.5s;
-    width: 12.5rem;
+    width: 10rem;
 }
 
-.is-sticky .site-logo {
-    width: 10rem;
+@media screen and (--medium) {
+
+    .site-logo {
+        transition: width 0.5s;
+        width: 12.5rem;
+    }
+
+    .is-sticky .site-logo {
+        width: 10rem;
+    }
+
 }

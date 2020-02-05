@@ -1,7 +1,7 @@
 .page-section {
     color: var(--color-black);
     font-size: 0.875rem;
-    padding: 6.5rem 0;
+    padding: 3rem 0;
 }
 
 .page-section--dark {
@@ -21,6 +21,14 @@
             text-decoration: none;
         }
 
+    }
+
+}
+
+@media screen and (--medium) {
+
+    .page-section {
+        padding: 6.5rem 0;
     }
 
 }

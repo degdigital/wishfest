@@ -1,22 +1,31 @@
 .site-header {
-    background-color: rgba(0,0,0, 0.6);
+    background-color: var(--color-black);
     left: 0;
-    padding: 2em 0;
+    padding: 1.25em 0;
     position: fixed;
     top: 0;
-    transition: background-color 0.5s, padding 0.5s;
     width: 100%;
     z-index: 500;
+}
 
-    & .page-wrapper {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-    }
+@media screen and (--medium) {
 
-    &.is-sticky {
-        background-color: var(--color-black);
-        padding: 1.25em 0;
+    .site-header {
+        background-color: rgba(0,0,0, 0.6);
+        padding: 2em 0;
+        transition: background-color 0.5s, padding 0.5s;
+
+        & .page-wrapper {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &.is-sticky {
+            background-color: var(--color-black);
+            padding: 1.25em 0;
+        }
+
     }
 
 }

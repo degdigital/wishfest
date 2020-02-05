@@ -1,8 +1,10 @@
 .page-wrapper {
     margin: 0 auto;
-    max-width: 77.8125rem;
+    max-width: 79.8125rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .page-wrapper--narrow {
-    max-width: 60rem;
+    max-width: 62rem;
 }

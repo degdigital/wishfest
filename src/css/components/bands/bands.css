@@ -1,5 +1,6 @@
 .bands__wrapper {
     display: flex;
+    flex-direction: column;
 }
 
 .bands__item {
@@ -7,10 +8,10 @@
     cursor: pointer;
     padding: 1.25rem 1.5rem 1.75rem;
     transition: background-color 0.25s, transform 0.25s;
-    width: calc(50% - 1.5rem);
+    width: 100%;
 
     & + .bands__item {
-        margin-left: 3rem;
+        margin-top: 2rem;
     }
 
     &:hover {
@@ -29,4 +30,22 @@
 
 .bands__image {
     width: 100%;
+}
+
+@media screen and (--medium) {
+
+    .bands__wrapper {
+        flex-direction: row;
+    }
+
+    .bands__item {
+        width: calc(50% - 1.5rem);
+
+        & + .bands__item {
+            margin-left: 3rem;
+            margin-top: 0;
+        }
+
+    }
+
 }

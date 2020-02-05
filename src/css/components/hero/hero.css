@@ -9,6 +9,8 @@
     height: 100%;
     justify-content: center;
     margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
     text-align: center;
 }
 
@@ -17,10 +19,22 @@
 }
 
 .hero__title {
-    font-size: 3.375rem;
+    font-size: 2.25rem;
     font-weight: 700;
 }
 
 .hero__subtitle {
-    font-size: 1rem;
+    font-size: 0.75rem;
+}
+
+@media screen and (--medium) {
+
+    .hero__title {
+        font-size: 3.375rem;
+    }
+
+    .hero__subtitle {
+        font-size: 1rem;
+    }
+
 }

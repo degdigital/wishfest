@@ -1,4 +1,8 @@
-.columns {
-    column-count: 2;
-    column-gap: 3rem;
+@media screen and (--medium) {
+    
+    .columns {
+        column-count: 2;
+        column-gap: 3rem;
+    }
+
 }
