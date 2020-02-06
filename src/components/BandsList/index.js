@@ -2,11 +2,11 @@ import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-const BandsList = ({ classNames, bands }) => {
+const BandsList = ({ classNames, sectionTitle, bands }) => {
   return (
     <section className={classnames('page-section', classNames)} id="bands">
       <div className="page-wrapper">
-        <h1 className="section-title">The Bands</h1>
+        <h1 className="section-title">{sectionTitle}</h1>
       </div>
       <div className="page-wrapper bands__wrapper">
         {bands.map(({ node: { slug, title, url, image } }) => (
@@ -23,6 +23,7 @@ const BandsList = ({ classNames, bands }) => {
 
 BandsList.propTypes = {
   classNames: PropTypes.string,
+  sectionTitle: PropTypes.string.isRequired,
   bands: PropTypes.array.isRequired
 };
 
