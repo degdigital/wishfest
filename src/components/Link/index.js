@@ -1,22 +1,19 @@
 import React from 'react';
-import { Link as GatsbyLink } from 'gatsby';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const Link = ({ children, to, classNames, activeClassName, partiallyActive, ...other }) => {
-  const isInternal = /^\/(?!\/)/.test(to)
-  if (isInternal) {
-    return (
-      <GatsbyLink
-        to={to}
-        activeClassName={activeClassName}
-        partiallyActive={partiallyActive}
-        {...other}
-      >
-        {children}
-      </GatsbyLink>
-    )
-  }
+
+  const handleClick = e => {
+    const regEx = new RegExp('^(http|https)://', 'i');
+    const isExternal = regEx.test(to);
+    if (!isExternal) {
+      e.preventDefault();
+      scrollTo(to);
+    }
+  };
+
   return (
-    <a className={classNames} href={to} {...other}>
+    <a className={classNames} href={to} {...other} onClick={handleClick}>
       {children}
     </a>
   )

@@ -2,7 +2,7 @@
     display: none;
 }
 
-@media screen and (--medium) {
+@media screen and (--large) {
 
     .primary-nav {
         display: block;
@@ -21,7 +21,7 @@
         }
 
         &:nth-last-child(2) {
-            margin-left: 2.5rem;
+            margin-left: 2.25rem;
         }
 
     }

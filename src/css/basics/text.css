@@ -16,3 +16,8 @@ p {
 .text-highlight {
     color: var(--color-teal-50);
 }
+
+.signature {
+    height: auto;
+    width: 10rem;   
+}

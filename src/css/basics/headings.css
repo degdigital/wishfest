@@ -11,3 +11,12 @@
     font-weight: 700;
     margin-bottom: 3rem;
 }
+.section-title,
+.section-subtitle {
+
+    & em,
+    & strong {
+        color: var(--color-teal-50);
+    }
+    
+}

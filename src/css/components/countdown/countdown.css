@@ -34,7 +34,7 @@
 @media screen and (--medium) {
 
     .countdown {
-        padding-bottom: 6.5rem;
+        padding-bottom: 4rem;
     }
 
     .countdown__item {
@@ -48,5 +48,14 @@
     .countdown__label {
         font-size: 1rem;
     }
+
+}
+
+@media screen and (--large) {
+
+    .countdown {
+        padding-bottom: 6.5rem;
+    }
+
 
 }

@@ -3,7 +3,7 @@
     width: 8rem;
 }
 
-@media screen and (--medium) {
+@media screen and (--large) {
 
     .site-logo {
         transition: width 0.5s;

@@ -28,6 +28,14 @@
 @media screen and (--medium) {
 
     .page-section {
+        padding: 4rem 0;
+    }
+
+}
+
+@media screen and (--large) {
+
+    .page-section {
         padding: 6.5rem 0;
     }
 
