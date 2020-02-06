@@ -41,8 +41,14 @@ const IndexPage = () => {
             title
             url
             image {
-              file {
-                url
+              sizes {
+                base64
+                srcWebp
+                srcSetWebp
+                aspectRatio
+                src
+                srcSet
+                sizes
               }
             }
           }

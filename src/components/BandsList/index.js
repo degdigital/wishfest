@@ -1,6 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
 
 const BandsList = ({ classNames, sectionTitle, bands }) => {
   return (
@@ -12,7 +13,7 @@ const BandsList = ({ classNames, sectionTitle, bands }) => {
         {bands.map(({ node: { slug, title, url, image } }) => (
           <a key={slug} className="bands__item" href={url} target="_blank" rel="noopener noreferrer">
             <h2 className="bands__title">{title}</h2>
-            <img className="bands__image" src={image.file.url} alt={title} />
+            <Img className="bands__image" alt={title} sizes={image.sizes} />
           </a>
         ))}
 
