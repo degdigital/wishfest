@@ -13,7 +13,7 @@ const BandsList = ({ classNames, sectionTitle, bands }) => {
         {bands.map(({ node: { slug, title, url, image } }) => (
           <a key={slug} className="bands__item" href={url} target="_blank" rel="noopener noreferrer">
             <h2 className="bands__title">{title}</h2>
-            <Img className="bands__image" alt={title} sizes={image.sizes} />
+            <Img className="bands__image" alt={title} sizes={image.sizes} loading="lazy" />
           </a>
         ))}
 
