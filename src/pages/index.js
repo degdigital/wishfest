@@ -1,16 +1,15 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { SEO, Layout, Hero, ContentPanel, Countdown, Venue } from '../components/';
-// import signature from '../images/signature.svg';
-import thesamples from '../images/thesamples.jpg';
-import counterculture from '../images/counterculture.jpg';
+import { SEO, Layout, Hero, ContentPanel, Countdown, BandsList, Venue } from '../components/';
+import { findItemBySlug } from '../utils/';
 
-const findItemBySlug = (items, slug) => items.find(item => item.node.slug === slug).node;
 const IndexPage = ({ data }) => {
+
   const contentPanelItems = data.allContentfulContentPanel.edges;
   const aboutKCRocksItem = findItemBySlug(contentPanelItems, 'about-kc-rocks');
   const aboutMAWItem = findItemBySlug(contentPanelItems, 'about-make-a-wish');
   const venueItem = findItemBySlug(contentPanelItems, 'venue');
+  const bandItems = data.allContentfulBand.edges;
 
   return (
     <Layout>
@@ -19,23 +18,7 @@ const IndexPage = ({ data }) => {
       <ContentPanel classNames="page-section--dark" slug={aboutKCRocksItem.slug} title={aboutKCRocksItem.title} subtitle={aboutKCRocksItem.childContentfulContentPanelSubtitleRichTextNode.json} content={aboutKCRocksItem.childContentfulContentPanelContentRichTextNode.json} />
       <Countdown />
       <ContentPanel classNames="page-section--purple" slug={aboutMAWItem.slug} title={aboutMAWItem.title} subtitle={aboutMAWItem.childContentfulContentPanelSubtitleRichTextNode.json} content={aboutMAWItem.childContentfulContentPanelContentRichTextNode.json} />
-      <section className="page-section page-section--dark" id="bands">
-        <div className="page-wrapper">
-          <h1 className="section-title">The Bands</h1>
-        </div>
-        <div className="page-wrapper page-wrapper--wide">
-          <div className="bands__wrapper">
-            <a className="bands__item" href="http://thesamples.com/" target="_blank" rel="noopener noreferrer">
-              <h2 className="bands__title">The Samples</h2>
-              <img className="bands__image" src={thesamples} alt="The Samples" />
-            </a>
-            <a className="bands__item" href="https://www.facebook.com/countercultureband/" target="_blank" rel="noopener noreferrer">
-              <h2 className="bands__title">Counter Culture</h2>
-              <img className="bands__image" src={counterculture} alt="Counter Culture" />
-            </a>
-          </div>
-        </div>
-      </section>
+      <BandsList classNames="page-section--dark" bands={bandItems} />
       <Venue />
       <ContentPanel classNames="page-section--purple" slug={venueItem.slug} title={venueItem.title} subtitle={venueItem.childContentfulContentPanelSubtitleRichTextNode.json} content={venueItem.childContentfulContentPanelContentRichTextNode.json} />
     </Layout >
@@ -44,8 +27,8 @@ const IndexPage = ({ data }) => {
 
 export default IndexPage;
 
-export const query = graphql`
-  query ContentPanelsQuery {
+export const dataQuery = graphql`
+  query PageQuery {
     allContentfulContentPanel {
       edges {
         node {
@@ -61,6 +44,20 @@ export const query = graphql`
           }
           childContentfulContentPanelContentRichTextNode {
             json
+          }
+        }
+      }
+    }
+    allContentfulBand(sort: {order: ASC, fields: id}) {
+      edges {
+        node {
+          slug
+          title
+          url
+          image {
+            file {
+              url
+            }
           }
         }
       }

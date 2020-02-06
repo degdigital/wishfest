@@ -15,3 +15,4 @@ export { default as ContentPanel } from './ContentPanel';
 export { default as Countdown } from './Countdown';
 export { default as Hero } from './Hero/';
 export { default as Venue } from './Venue/';
+export { default as BandsList } from './BandsList';
