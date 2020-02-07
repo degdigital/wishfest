@@ -27,7 +27,7 @@ module.exports = {
       // },
       {
         name: 'Donate',
-        link: 'https://secure2.wish.org/site/SPageServer?pagename=donate_now&chid=073-000',
+        link: 'http://site.wish.org/goto/kcrocks',
         classNames: 'button button--small button--reversed'
       }
     ]

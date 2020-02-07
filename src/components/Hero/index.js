@@ -32,8 +32,8 @@ const Hero = () => {
         const {
           donateLinkText,
           donateLinkUrl,
-          getTicketsLinkText,
-          getTicketsLinkUrl,
+          // getTicketsLinkText,
+          // getTicketsLinkUrl,
           subtitle,
           title,
           backgroundImage

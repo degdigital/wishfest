@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { PrimaryNav } from '../';
-import logo from '../../images/site_logo.svg';
+// import logo from '../../images/site_logo.svg';
 
 const Header = ({ siteTitle }) => {
 
