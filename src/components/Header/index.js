@@ -27,7 +27,7 @@ const Header = ({ siteTitle }) => {
       <div className="page-wrapper">
         <h1 className="site-logo">
           <Link to="/">
-            <img className="site-logo" src={logo} alt="KC Rocks" />
+            KC<span>Rocks</span>
           </Link>
         </h1>
         <PrimaryNav />
