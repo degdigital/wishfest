@@ -32,6 +32,11 @@
     width: 100%;
 }
 
+.bands__description {
+    color: var(--color-white);
+    margin-top: 2rem;
+}
+
 @media screen and (--medium) {
 
     .bands__wrapper {

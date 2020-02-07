@@ -20,7 +20,13 @@ const ContentPanel = ({ slug, classNames, title, subtitle, content }) => {
       [MARKS.ITALIC]: text => <em>{text}</em>
     },
     renderNode: {
-      [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>
+      [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
+      [BLOCKS.EMBEDDED_ASSET]: node => {
+        const imgNode = node.data.target.fields;
+        return (
+          <p><img className="rte-image" src={imgNode.file['en-US'].url} alt={imgNode.title['en-US']} /></p>
+        );
+      }
     }
   };
 

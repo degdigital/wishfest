@@ -40,6 +40,9 @@ const IndexPage = () => {
             slug
             title
             url
+            childContentfulBandDescriptionRichTextNode {
+              json
+            }
             image {
               sizes {
                 base64
@@ -66,7 +69,6 @@ const IndexPage = () => {
   const aboutMAWItem = findItemBySlug(contentPanelItems, 'about-make-a-wish');
   const venueItem = findItemBySlug(contentPanelItems, 'venue');
   const bandItems = data.allContentfulBand.edges;
-
   return (
     <Layout>
       <SEO title={homepageTitle} />
