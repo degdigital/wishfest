@@ -20,11 +20,11 @@ module.exports = {
         name: 'Venue',
         link: '#venue'
       },
-      {
-        name: 'Get Tickets',
-        link: 'https://www.thetrumankc.com/tickets/',
-        classNames: 'button button--small'
-      },
+      // {
+      //   name: 'Get Tickets',
+      //   link: 'https://www.thetrumankc.com/tickets/',
+      //   classNames: 'button button--small'
+      // },
       {
         name: 'Donate',
         link: 'https://secure2.wish.org/site/SPageServer?pagename=donate_now&chid=073-000',
