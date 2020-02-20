@@ -32,8 +32,8 @@ const Hero = () => {
         const {
           donateLinkText,
           donateLinkUrl,
-          // getTicketsLinkText,
-          // getTicketsLinkUrl,
+          getTicketsLinkText,
+          getTicketsLinkUrl,
           subtitle,
           title,
           backgroundImage
@@ -51,7 +51,7 @@ const Hero = () => {
                 <h2 className="hero__subtitle">{subtitle}</h2>
               </div>
               <div className="button-group">
-                {/* <a className="button" href={getTicketsLinkUrl}>{getTicketsLinkText}</a> */}
+                <a className="button" href={getTicketsLinkUrl}>{getTicketsLinkText}</a>
                 <a className="button button--reversed" href={donateLinkUrl}>{donateLinkText}</a>
               </div>
             </div>

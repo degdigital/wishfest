@@ -20,11 +20,11 @@ module.exports = {
         name: 'Venue',
         link: '#venue'
       },
-      // {
-      //   name: 'Get Tickets',
-      //   link: 'https://www.thetrumankc.com/tickets/',
-      //   classNames: 'button button--small'
-      // },
+      {
+        name: 'Get Tickets',
+        link: 'https://www.eventbrite.com/e/kc-rocks-featuring-the-samples-and-counter-culture-tickets-95297839403',
+        classNames: 'button button--small'
+      },
       {
         name: 'Donate',
         link: 'http://site.wish.org/goto/kcrocks',
