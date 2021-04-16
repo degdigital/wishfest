@@ -7,7 +7,7 @@ const Hero = () => {
     <StaticQuery
       query={graphql`
       query {
-        contentfulHero(slug: {eq: "kc-rocks-2020"}) {
+        contentfulHero(slug: {eq: "kc-rocks-2021"}) {
           donateLinkText
           donateLinkUrl
           getTicketsLinkText
